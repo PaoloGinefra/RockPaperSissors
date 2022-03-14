@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Fredoka:wght@500&family=Varela+Round&display=swap');
+
+html{
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+.Buttons{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    margin: 0% 1%;
+    padding: 5%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.Show{
+    font-size: 1.2em;
+}
