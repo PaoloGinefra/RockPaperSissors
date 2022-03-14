@@ -1,0 +1,1 @@
+const compChoice = document.getElementById('computer-choice')
