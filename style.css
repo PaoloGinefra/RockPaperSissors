@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Fredoka:wght@500&family=Varela+Round&display=swap');
 
+:root {
+    --AiColor: rgb(177, 37, 37);
+    --YourColor: rgb(54, 54, 173);
+  }
+
 html{
     text-align: center;
     font-family: 'Varela Round', sans-serif;
@@ -9,6 +14,7 @@ html{
 .Buttons{
     display: flex;
     justify-content: center;
+    margin: 5em;
 }
 
 button{
@@ -16,8 +22,49 @@ button{
     padding: 5%;
     text-align: center;
     font-size: 2em;
+    size: 0.5em;
+    background-color: white;
+    border-radius: 50%;
+    transition-duration: 0.4s;
+    border: 0.2em solid var(--YourColor);
+}
+
+button:hover{
+    background-color: var(--YourColor);
 }
 
 .Show{
     font-size: 1.2em;
+}
+
+.AI{
+    color: var(--AiColor);
+}
+
+.You{
+    color: var(--YourColor)
+}
+
+#Title{
+    padding: 0;
+    right: 0;
+    left: 0;
+    font-size: 5em;
+    animation-name: SizeLoop;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes SizeLoop{
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
