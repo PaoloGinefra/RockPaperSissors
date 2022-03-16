@@ -31,6 +31,7 @@ button{
 
 button:hover{
     background-color: var(--YourColor);
+    transform: scale(1.1);
 }
 
 .Show{
@@ -53,6 +54,7 @@ button:hover{
     animation-name: SizeLoop;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes SizeLoop{

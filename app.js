@@ -25,10 +25,12 @@ function getResult(){
         result = 'It\'s a draw'
     }
     else if(Math.abs(userChoice - computerChoice) === 2){
-        result = 'The winner is ' + (userChoice < computerChoice ? 'You' : 'AI')
+        let r = (userChoice < computerChoice ? 'You' : 'AI')
+        result = 'The winner is ' + '<span class = \'' + r + '\'>' + r + '</span' 
     }
     else{
-        result = 'The winner is ' + (userChoice > computerChoice ? 'You' : 'AI')
+        let r = (userChoice > computerChoice ? 'You' : 'AI')
+        result = 'The winner is ' + '<span class = \'' + r + '\'>' + r + '</span' 
     }
     resultDisplay.innerHTML = result
 }
