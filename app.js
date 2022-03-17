@@ -7,6 +7,8 @@ let userChoice
 let computerChoice
 let result
 
+var GodMode = false;
+
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     userChoice = Choices.indexOf(e.target.id)
     userChoiceDisplay.innerHTML = e.target.id
@@ -15,8 +17,14 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 }))
 
 function generateComputerChoice(){
-    computerChoice = Math.floor(Math.random() * possibleChoices.length)
+    if(GodMode){
+        computerChoice = (userChoice + Math.round(Math.random())) % 3;
+    }
+    else{
+        computerChoice = Math.floor(Math.random() * possibleChoices.length)
+    }
     compChoiceDisplay.innerHTML = Choices[computerChoice]
+
 }
 
 
@@ -34,3 +42,11 @@ function getResult(){
     }
     resultDisplay.innerHTML = result
 }
+
+document.addEventListener('keypress', (event) => {
+    var name = event.key;
+    
+    if(name == 'g'){
+        GodMode = !GodMode;
+    }
+  }, false);

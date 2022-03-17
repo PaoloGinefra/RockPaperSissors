@@ -3,12 +3,20 @@
 :root {
     --AiColor: rgb(177, 37, 37);
     --YourColor: rgb(54, 54, 173);
+    --RockColor: rgb(177, 171, 122);
+    --PaperColor: rgb(182, 201, 212);
+    --SissorsColor: rgb(185, 137, 185);
   }
 
 html{
     text-align: center;
     font-family: 'Varela Round', sans-serif;
+    overflow: hidden;
+}
 
+body{
+    display: flex;
+    flex-direction: column;
 }
 
 .Buttons{
@@ -31,7 +39,7 @@ button{
 
 button:hover{
     background-color: var(--YourColor);
-    transform: scale(1.1);
+    transform: scale(1.1) translate(0, -0.6em);
 }
 
 .Show{
@@ -50,7 +58,7 @@ button:hover{
     padding: 0;
     right: 0;
     left: 0;
-    font-size: 5em;
+    font-size: 5vw;
     animation-name: SizeLoop;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -69,4 +77,20 @@ button:hover{
     100% {
         transform: scale(1);
     }
+}
+
+#🪨:hover{
+    background-color: var(--RockColor);
+}
+
+#🧻:hover{
+    background-color: var(--PaperColor);
+}
+
+#✂️:hover{
+    background-color: var(--SissorsColor);
+}
+
+#Goddo{
+    text-align: left;
 }
